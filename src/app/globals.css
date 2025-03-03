@@ -53,7 +53,7 @@ body {
   @apply lg:border-none md:border-none sm:border-t-2 sm:border-b-2 sm:border-gray-100 xs:border-t-2 xs:border-b-2 xs:border-gray-100  xxs:border-t-2 xxs:border-b-2 xxs:border-gray-100  xxxs:border-t-2 xxxs:border-b-2 xxxs:border-gray-100;
 }
 .mobilemenu{
-  @apply lg:relative md:relative sm:fixed xs:fixed xxs:fixed xxxs:fixed top-0 h-full lg:left-0 md:left-0 lg:px-0 md:px-0 sm:px-[16px] xs:px-[16px] xxs:px-[16px] xxxs:px-[16px] w-full z-10;
+  @apply lg:relative md:relative sm:fixed xs:fixed xxs:fixed xxxs:fixed top-0 h-full lg:left-0 md:left-0 lg:px-0 md:px-0 sm:px-[16px] xs:px-[16px] xxs:px-[16px] xxxs:px-[16px] w-full z-20;
 }
 
 .mobilemenu ul{
@@ -177,6 +177,9 @@ body {
 .workpart.section_space.pb-0{
   padding-bottom: 0px;
 }
+.menu_open{
+  overflow: hidden;
+}
 @media (max-width:991px) {
   .skillsmain ul li{
     width: 16.66%;
@@ -185,7 +188,7 @@ body {
 @media (max-width:767px) {
   .mobilemenu::after{
     content: "";
-    @apply dark:sm:bg-[#030712] dark:xs:bg-[#030712] dark:xxs:bg-[#030712] dark:xxxs:bg-[#030712] top-0 w-full h-full absolute z-[-1] bg-white;
+    @apply dark:sm:bg-[#030712] dark:xs:bg-[#030712] dark:xxs:bg-[#030712] dark:xxxs:bg-[#030712] top-0 left-0 w-full h-full absolute z-[-1] bg-white;
   }
   .bannerimg::after,.aboutimg::after{
     width:  calc(100% + 0px);
@@ -204,9 +207,9 @@ body {
   .contactdetails svg{
     width: 24px;
   }
-  .getintouch.section_space{
+  /* .getintouch.section_space{
     padding-top: 0;
-  }
+  } */
 }
 @media (max-width:640px) {
   .skillsmain ul li{

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="homepage">
       <Header/>
-      <section className="home_bannerwrap" id="banner">
+      <section className="home_bannerwrap" id="banner" role="banner">
         <HomeBanner/>
       </section>
       <section className="aboutuswrap bg-gray-50 dark:bg-[#111827]" id="about">
