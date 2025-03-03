@@ -180,6 +180,9 @@ body {
 .menu_open{
   overflow: hidden;
 }
+.footerpart p.text-base{
+  line-height: 40px !important;
+}
 @media (max-width:991px) {
   .skillsmain ul li{
     width: 16.66%;
@@ -215,4 +218,8 @@ body {
   .skillsmain ul li{
     width: 33.33%;
   }
+  .aboutcontentpart ul li{
+    width: 100%;
+  }
+  
 }

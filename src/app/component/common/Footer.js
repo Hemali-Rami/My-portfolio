@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className='bg-gray-50 dark:bg-[#111827]'>
     <div className='lg:container m-auto px-[15px]'>
-      <div className='footerpart py-[26px] leading-[36px]'>
-        <p className='flex items-center justify-center flex-wrap text-gray-600 text-base dark:text-white'>
+      <div className='footerpart py-[26px] '>
+        <p className='flex items-center justify-center flex-wrap text-gray-600 text-base dark:text-white lg:leading-[40px]'>
           <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" className='mr-2'>
             <g clipPath="url(#clip0_327_412)">
             <path d="M8.49992 14.6668C12.1818 14.6668 15.1666 11.6821 15.1666 8.00016C15.1666 4.31826 12.1818 1.3335 8.49992 1.3335C4.81802 1.3335 1.83325 4.31826 1.83325 8.00016C1.83325 11.6821 4.81802 14.6668 8.49992 14.6668Z" stroke={darkMode?"#ffff":"#4B5563"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
