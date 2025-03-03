@@ -26,7 +26,7 @@ const experience = [
   {
     title:"Jr. XHTML Developer",
     fromto:"Oct 2018 - Mar 2021",
-    cimg:"CIPL-logo",
+    cimg:"cipl_Logo",
     desc:[
       "Worked with and gained experience in HTML5, CSS, and jQuery technologies.",
       "Assisted in designing WordPress, WooCommerce, and PHP projects.",
