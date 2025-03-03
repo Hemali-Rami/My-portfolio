@@ -22,7 +22,7 @@ const companydes=[
         name:"Mooninvoice",
         desc:"Developed a fully responsive company product website showcasing various business operations, including invoices, estimates, purchase orders, sales receipts, time tracking, reports, and project management. The website was built with fully custom modules to meet specific business needs.",
         techno:["HTML5","CSS","Javascript","Bootstrap"],
-        wimg:"mooninvoice",
+        wimg:"moon_invoice",
         wLink:"https://www.mooninvoice.com/"
     },
     {
