@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.4.7",
+    "gsap": "^3.12.7",
     "next": "15.1.7",
+    "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scroll": "^1.9.3"

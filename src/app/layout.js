@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
-import { ThemeProvider } from "./component/common/ThemeProvider";
+import LoaderWrapper from "./component/common/LoaderWrapper";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,8 +22,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} antialiased`}
       >
-      <ThemeProvider> {children}</ThemeProvider>
-       
+      <LoaderWrapper> {children}</LoaderWrapper>  
       </body>
     </html>
   );

@@ -1,3 +1,5 @@
+"use client"; // Enable client-side interactivity
+import { useEffect, useState } from "react";
 import Footer from "./component/common/Footer";
 import Header from "./component/common/Header";
 import HomeAbout from "./component/HomeAbout";
@@ -7,9 +9,12 @@ import HomeExperience from "./component/HomeExperience";
 import { HomeSkills } from "./component/HomeSkills";
 import HomeWork from "./component/HomeWork";
 
+
 export default function Home() {
+ 
+
   return (
-    <div className="homepage">
+      <div className="homepage">
       <Header/>
       <section className="home_bannerwrap" id="banner" role="banner">
         <HomeBanner/>
@@ -31,6 +36,5 @@ export default function Home() {
       </section>
       <Footer/>
     </div>
-
   );
 }
