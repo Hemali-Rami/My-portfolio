@@ -55,7 +55,7 @@ const HomeExperience = () => {
                         </div>
                       </div>
                       <div className='companydec lg:w-[60%] md:w-[60%] sm:w-[60%] xs:w-full xxs:w-full xxxs:w-full'>
-                        <div className='contenthead lg:flex md:flex sm:flex justify-between mb-3'>
+                        <div className='contenthead lg:flex md:flex sm:flex justify-between mb-3 flex-wrap lg:flex-row md:flex-col'>
                           <h3 className='text-xl text-gray-900 font-semibold dark:text-white lg:mt-0 md:mt-0 sm:mt-0 xs:mt-[16px] xxs:mt-[16px] xxxs:mt-[16px]'>{exp.title}</h3>
                           <span className='fromto text-base text-gray-600 dark:text-white lg:mt-0 md:mt-0 sm:mt-0 xs:mt-[16px] xxs:mt-[16px] xxxs:mt-[16px] block'>{exp.fromto}</span>
                         </div>
