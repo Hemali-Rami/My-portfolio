@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
         className={`${inter.variable} antialiased`}
       >
       <LoaderWrapper> {children}</LoaderWrapper>  
+        {/* {children} */}
       </body>
     </html>
   );

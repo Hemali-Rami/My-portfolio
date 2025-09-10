@@ -1,8 +1,18 @@
 "use client"; // Enable client-side interactivity
+import { useEffect, useState } from 'react';
 import ScrolltoTop from './ScrolltoTop';
 import { useTheme } from './ThemeProvider';
+import useMobile from './useMobile';
 const Footer = () => {
   const { darkMode } = useTheme(); 
+ const isMobile = useMobile();
+   const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true); // ensures client-side rendering
+  }, []);
+
+  if (!mounted) return null;
   return (
     <footer className='bg-gray-50 dark:bg-[#111827]'>
     <div className='lg:container m-auto px-[15px]'>

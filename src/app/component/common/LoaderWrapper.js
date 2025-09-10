@@ -16,6 +16,7 @@ const LoaderWrapper = ({ children }) => {
   return (
     <ThemeProvider>
       {isLoading ? <Loader onComplete={() => setIsLoading(false)} /> : children}
+      {/* {children} */}
     </ThemeProvider>
   );
 };

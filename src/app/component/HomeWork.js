@@ -1,8 +1,22 @@
 "use client"; // Enable client-side interactivity
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTheme } from './common/ThemeProvider';
+import { motion } from 'framer-motion';
+import useMobile from "./common/useMobile"; 
+
+     
+const fadeLeft = {
+  hidden: { opacity: 0, x: -80 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 80 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const companydes=[
     {
         name:"Concept Infoway",
@@ -54,11 +68,20 @@ const companydes=[
         wLink:"https://www.healthya.co.uk/"
     },
 ]
+
 const HomeWork = () => {
     const { darkMode } = useTheme(); 
+     const isMobile = useMobile();
+     const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; 
   return (
     <div className='lg:container m-auto px-[15px]'>
-        <div className="workpart section_space pb-0">
+        <div className="workpart section_space pb-0 overflow-x-hidden">
              <div className='text-center'>
                 <h5 className='bg-gray-200 text-gray-600 font-medium py-[4px] px-[20px] rounded-full inline-block text-sm dark:bg-[#374151] dark:text-white'>Work</h5>
                 <p className='text-gray-600 text-[20px] mt-[16px] block dark:text-[#D1D5DB]'>Some of the noteworthy projects I have built:</p>
@@ -67,8 +90,15 @@ const HomeWork = () => {
                 {
                     companydes.map((co,index)=>{
                         const parentClass = index % 2 !== 0 ? "lg:flex lg:flex-row-reverse md:flex" : "flex";
+                        const animationVariant = (!isMobile && index % 2 === 0) ? fadeLeft : (!isMobile && index % 2 !== 0) ? fadeRight : null;
+const initialState = !isMobile ? "hidden" : undefined;
+const animateState = !isMobile ? "visible" : undefined;
                         return(
-                            <div className={`workbox lg:flex lg:flex-row md:flex md:flex-col sm:flex-col xs:flex-col xxs:flex-col xxxs:flex-col shadow-md rounded-md lg:mb-[48px] md:mb-[30px] sm:mb-[24px] xs:mb-[24px] xxs:mb-[24px] xxxs:mb-[24px] overflow-hidden ${parentClass}`} key={index}>
+                            <motion.div className={`workbox lg:flex lg:flex-row md:flex md:flex-col sm:flex-col xs:flex-col xxs:flex-col xxxs:flex-col shadow-md rounded-md lg:mb-[48px] md:mb-[30px] sm:mb-[24px] xs:mb-[24px] xxs:mb-[24px] xxxs:mb-[24px] overflow-hidden ${parentClass}`} key={index} 
+               variants={animationVariant || {}}
+  initial={initialState}
+  animate={animateState}
+                viewport={{ once: true, amount: 0.2 }}>
                                 <div className='projectimg flex-1 bg-gray-50 dark:bg-[#374151] lg:p-[48px] md:p-[42px] sm:p-[32px] xs:p-[32px] xxs:p-[32px] xxxs:p-[32px] flex items-center'>
                                     <Image src={`/images/website/${co.wimg}.png`} alt={co.name} width={480} height={384} className='rounded-md w-full lg:h-full md:h-auto sm:h-auto xs:h-auto xxs:h-auto xxxs:h-auto'/>
                                 </div>
@@ -105,7 +135,7 @@ const HomeWork = () => {
                                     }
                                    
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })
                 }

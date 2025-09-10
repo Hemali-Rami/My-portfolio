@@ -1,5 +1,6 @@
 "use client"; // Enable client-side interactivity
-import { useEffect, useState } from "react";
+import React from "react";
+import dynamic from "next/dynamic";
 import Footer from "./component/common/Footer";
 import Header from "./component/common/Header";
 import HomeAbout from "./component/HomeAbout";
@@ -11,7 +12,7 @@ import HomeWork from "./component/HomeWork";
 
 
 export default function Home() {
- 
+
 
   return (
       <div className="homepage">

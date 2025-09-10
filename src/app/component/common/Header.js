@@ -115,6 +115,10 @@ useEffect(() => {
                         spy={true}
                         role="link"
                         tabIndex={0}
+                        onClick={() => {
+                          setmenuOpen(false); 
+                          document.body.classList.remove("menu_open"); 
+                        }}
                         onKeyPress={(e) => {
                           if (e.key === 'Enter') {
                             e.preventDefault();
@@ -140,6 +144,10 @@ useEffect(() => {
                         spy={true}
                         role="link"
                         tabIndex={0}
+                         onClick={() => {
+                          setmenuOpen(false); 
+                          document.body.classList.remove("menu_open"); 
+                        }}
                         onKeyPress={(e) => {
                           if (e.key === 'Enter') {
                             e.preventDefault();
@@ -165,6 +173,10 @@ useEffect(() => {
                           spy={true}
                           role="link"
                           tabIndex={0}
+                           onClick={() => {
+                          setmenuOpen(false); 
+                          document.body.classList.remove("menu_open"); 
+                        }}
                           onKeyPress={(e) => {
                             if (e.key === 'Enter') {
                               e.preventDefault();
@@ -188,6 +200,10 @@ useEffect(() => {
                         offset={-96}
                         activeClass="active" // This adds the 'active' class when the section is in view
                         spy={true}
+                         onClick={() => {
+                          setmenuOpen(false); 
+                          document.body.classList.remove("menu_open"); 
+                        }}
                         role="link"
                           tabIndex={0}
                           onKeyPress={(e) => {
@@ -212,10 +228,14 @@ useEffect(() => {
                         smooth="easeInOutQuad"
                         duration={800}
                         offset={0}
-                        activeClass="active" // This adds the 'active' class when the section is in view
+                        activeClass="active"
                         spy={true}
                         role="link"
                         tabIndex={0}
+                         onClick={() => {
+                          setmenuOpen(false); 
+                          document.body.classList.remove("menu_open"); 
+                        }}
                         onKeyPress={(e) => {
                           if (e.key === 'Enter') {
                             e.preventDefault();
@@ -257,7 +277,7 @@ useEffect(() => {
                     </svg>)}
                   </button>
                 </div>
-                <Link className='btn btn_primary lg:ml-[16px] md:ml-[10px] text-sm lg:w-auto md:w-auto sm:w-full xs:w-full xxs:w-full xxxs:w-full min-w-[146px] text-center inline-block' href="https://drive.google.com/file/d/1ea5eKD7XGhw2hq-WG_zGieu5LRmaMCcv/view?usp=sharing" target='_blank'>Download CV</Link>
+                <Link className='btn btn_primary lg:ml-[16px] md:ml-[10px] text-sm lg:w-auto md:w-auto sm:w-full xs:w-full xxs:w-full xxxs:w-full min-w-[146px] text-center inline-block' href="https://drive.google.com/file/d/1xRWG6xuK8yYY6KhKxSsQqaeFcBCGEnOy/view?usp=sharing" target='_blank'>Download CV</Link>
               </div>
               </div>
         </div>

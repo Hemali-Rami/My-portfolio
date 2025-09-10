@@ -109,7 +109,7 @@ body {
 .dark .aboutcontentpart p,.dark .aboutcontentpart ul li,.dark .aboutcontentpart h2{
   color:#fff;
 }
-.aboutcontentpart ul li{
+.aboutcontentpart  li{
   position: relative;
   padding-left: 24px;
   font-size: 16px;
@@ -152,19 +152,19 @@ body {
 .aboutcontentpart ul{
   margin-bottom: 6px;
 }
-.skillsmain ul li{
+.skillsmain  li{
   text-align: center;
   display: inline-block;
-  width: 14.28%;
+  width: 12.28%;
   padding: 0 15px;
   margin-bottom: 48px;
 }
-.skillsmain ul li img{
+.skillsmain  li img{
   text-align: center;
   margin: auto;
   margin-bottom: 8px;
 }
-.skillsmain ul li span{
+.skillsmain  li span{
   font-size: 18px;
   color: #4B5563;
 }
@@ -184,7 +184,7 @@ body {
   line-height: 40px !important;
 }
 @media (max-width:991px) {
-  .skillsmain ul li{
+  .skillsmain li{
     width: 16.66%;
   }
 }
@@ -215,10 +215,10 @@ body {
   } */
 }
 @media (max-width:640px) {
-  .skillsmain ul li{
+  .skillsmain  li{
     width: 33.33%;
   }
-  .aboutcontentpart ul li{
+  .aboutcontentpart  li{
     width: 100%;
   }
   
