@@ -163,6 +163,7 @@ body {
   text-align: center;
   margin: auto;
   margin-bottom: 8px;
+  max-height: 64px;
 }
 .skillsmain  li span{
   font-size: 18px;
@@ -210,9 +211,16 @@ body {
   .contactdetails svg{
     width: 24px;
   }
-  /* .getintouch.section_space{
-    padding-top: 0;
-  } */
+  .aboutcontentpart p:last-child{
+    margin-bottom: 0;
+  }
+  
+   .skillsmain li:last-child{
+    margin-bottom: 0 !important;
+}
+ .skillsmain li:nth-child(13){
+    margin-bottom: 0 !important;
+}
 }
 @media (max-width:640px) {
   .skillsmain  li{

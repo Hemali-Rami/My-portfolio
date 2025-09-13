@@ -25,10 +25,10 @@ const HomeContact = () => {
   if (!mounted) return null;
   return (
     <div className='lg:container m-auto px-[15px]'>
-        <motion.div className='getintouch section_space'initial={isMobile ? {} : { opacity: 0, y: 50 }}
-  whileInView={isMobile ? {} : { opacity: 1, y: 0 }}
-  transition={isMobile ? {} : { duration: 0.6, ease: "easeOut" }}
-  viewport={isMobile ? {} : { once: true }}>
+        <motion.div className='getintouch section_space' initial={isMobile ? {} : { opacity: 0, y: 50 }}
+        whileInView={isMobile ? {} : { opacity: 1, y: 0 }}
+        transition={isMobile ? {} : { duration: 0.6, ease: "easeOut" }}
+        viewport={isMobile ? {} : { once: true }}>
             <div className='text-center'>
                 <h5 className='bg-gray-200 text-gray-600 font-medium py-[4px] px-[20px] rounded-full inline-block text-sm dark:bg-[#374151] dark:text-white'>Get in touch</h5>
                 <p className='text-gray-600 text-[20px] mt-[16px] block dark:text-[#D1D5DB] lg:max-w-[576px] md:max-w-[576px] sm:max-w-full xs:max-w-full xxs:max-w-full xxxs:max-w-full m-auto'>What’s next? Feel free to reach out to me if you're looking for a Designer, have a query, or simply want to connect.</p>
