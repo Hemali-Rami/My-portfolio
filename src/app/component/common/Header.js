@@ -277,7 +277,7 @@ useEffect(() => {
                     </svg>)}
                   </button>
                 </div>
-                <Link className='btn btn_primary lg:ml-[16px] md:ml-[10px] text-sm lg:w-auto md:w-auto sm:w-full xs:w-full xxs:w-full xxxs:w-full min-w-[146px] text-center inline-block' href="https://drive.google.com/file/d/1xRWG6xuK8yYY6KhKxSsQqaeFcBCGEnOy/view?usp=sharing" target='_blank'>Download CV</Link>
+                <Link className='btn btn_primary lg:ml-[16px] md:ml-[10px] text-sm lg:w-auto md:w-auto sm:w-full xs:w-full xxs:w-full xxxs:w-full min-w-[146px] text-center inline-block' href="https://drive.google.com/file/d/154V4tSr67n1ItjscaPiRjL_kEaf00Dka/view?usp=drive_link" target='_blank'>Download CV</Link>
               </div>
               </div>
         </div>
