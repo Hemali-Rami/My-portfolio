@@ -15,8 +15,19 @@ const fadeUp = {
 
 const experience = [
   {
+    title: "Sr. Frontend Developer",
+    fromto: "Dec 2025 - Present",
+    cimg: "wpweb-logo",
+    desc: [
+      "Designed and developed responsive websites using custom HTML5, CSS3, JavaScript, jQuery, Tailwind CSS, and React / Next.js",
+      "Converted Figma and Photoshop designs into clean, pixel-perfect, and accessible UI.",
+      "Built and customized websites using WordPress page buildersDesigned and customized Shopify themes and WooCommerce-based eCommerce websites.such as Elementor and Spectra.",
+      "Ensured cross-browser compatibility, WCAG accessibility, SEO best practices, and PageSpeed optimization.",
+    ],
+  },
+  {
     title: "Independent Web Designer (Self-Projects & Courses)",
-    fromto: "Jun 2024 - Present",
+    fromto: "Jun 2024 - Dec 2025",
     cimg: "Hemali_logo",
     desc: [
       "Built personal projects using React, Next.js, and Tailwind CSS.",
