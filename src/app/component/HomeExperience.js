@@ -19,10 +19,13 @@ const experience = [
     fromto: "Dec 2025 - Present",
     cimg: "wpweb-logo",
     desc: [
-      "Designed and developed responsive websites using custom HTML5, CSS3, JavaScript, jQuery, Tailwind CSS, and React / Next.js",
-      "Converted Figma and Photoshop designs into clean, pixel-perfect, and accessible UI.",
-      "Built and customized websites using WordPress page buildersDesigned and customized Shopify themes and WooCommerce-based eCommerce websites.such as Elementor and Spectra.",
-      "Ensured cross-browser compatibility, WCAG accessibility, SEO best practices, and PageSpeed optimization.",
+      "Designed and developed responsive, mobile-first websites and web applications using HTML5, CSS3, JavaScript, jQuery, Tailwind CSS, React, and Next.js.",
+      "Converted Figma and Photoshop designs into clean, pixel-perfect, accessible, and cross-browser compatible user interfaces.",
+      "Built, customized, and maintained websites using WordPress page builders including Elementor, Spectra, and Avada, ensuring scalable and user-friendly solutions.",
+      "Designed and customized Shopify themes and WooCommerce-based eCommerce websites, enhancing user experience and storefront performance.",
+      "Utilized AI-powered tools such as ChatGPT and Codex to assist with code generation, debugging, documentation, UI implementation, and development workflow optimization.",
+      "Ensured compliance with WCAG accessibility guidelines, SEO best practices, Core Web Vitals, cross-browser compatibility, and Google PageSpeed optimization.",
+      "Collaborated with designers, project managers, and clients to deliver high-quality frontend solutions while mentoring and supporting junior developers."
     ],
   },
   {

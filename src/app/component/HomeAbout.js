@@ -33,17 +33,23 @@ const HomeAbout = () => {
                     viewport={isMobile ? {} : { once: true, amount: 0.3 }}
                     transition={isMobile ? {} : { duration: 0.8, ease: "easeOut" }}>
                     <h2 className='lg:text-3xl md:text-3xl sm:text-2xl xs:text-2xl xxs:text-2xl xxxs:text-2xl text-gray-900 font-semibold leading-[36px] mb-[24px]'>Curious about me? Here you have it:</h2>
-                    <p>I'm a passionate, self-driven <strong>Sr. Frontend Developer</strong> specializing in crafting beautiful, functional, and user-friendly digital experiences. With expertise in <strong>HTML, CSS, SCSS, Tailwind CSS, and Bootstrap (3, 4, and 5)</strong>, I focus on creating pixel-perfect, responsive, and accessible designs that work across all browsers.</p>
-                    <p>My journey in web design started in <strong>2018</strong>, and over the past <strong>6+ years</strong>, I have honed my skills in <b>design systems, UI/UX principles, and front-end styling</b>. I have experience working with various design tools and frameworks, ensuring that every project I work on meets the highest visual and accessibility standards.</p>
-                    <p>Beyond traditional web design, I have worked on <strong>Email Templates, Email Signatures, Newsletters, PDF design</strong>, and designing for CMS platforms like <strong>WordPress, Shopify, WooCommerce (Elementor, Avada,Spectra) and PHP website design and Angular projects</strong>. I also have experience in building and styling <b>React and Next.js applications</b>, ensuring seamless UI implementation.</p>
-                    <p>When I'm not designing, I love exploring the latest trends in UI/UX, accessibility, and modern front-end technologies.</p>
+                    <p>I'm a passionate and self-driven <strong>Senior Frontend Developer</strong> with <strong>7+ years</strong> of experience creating responsive, accessible, and high-performance websites and web applications.</p>
+                    <p>My journey in frontend development started in 2018, and over the years, I have honed my skills in UI/UX design, design systems, and modern frontend technologies including <strong>React.js, Next.js, Angular, HTML5, CSS3, SCSS, JavaScript, Tailwind CSS, and Bootstrap</strong>. I focus on building pixel-perfect user interfaces that deliver exceptional user experiences across all devices and browsers.</p>
+                    <p>Beyond web application development, I have extensive experience creating Email Templates, Email Signatures, Newsletters, PDF layouts, and designing websites for <strong>WordPress, WooCommerce, Shopify, Drupal, and custom PHP platforms using Elementor, Spectra, and Avada</strong>. I also ensure <strong>web accessibility, performance optimization, SEO best practices, and cross-browser compatibility</strong> in every project.</p>
+                    <p>To enhance productivity and streamline development workflows, I leverage <strong>AI-powered tools</strong> such as <strong>ChatGPT, GitHub Copilot, Claude, and Gemini</strong> for code generation, debugging, documentation, and UI implementation.</p>
+                    <p>When I'm not building digital experiences, I enjoy exploring emerging technologies, AI-assisted development, accessibility standards, and the latest frontend trends.</p>
                     <p>Quick Facts About Me</p>
                     <ul>
-                        <li>Master of Computer Applications</li>
-                        <li>Bechlor of Computer Applications </li>
-                        <li>Web Design & Front-End Styling</li>
-                        <li>UI/UX, Responsive Design, Accessibility</li>
-                        <li>Yes, open for projects!</li>
+                        <li>7+ Years Building Digital Experiences</li>
+                        <li>MCA Graduate & Lifelong Learner </li>
+                        <li>React.js, Next.js & Modern Frontend Technologies</li>
+                        <li>WordPress, Shopify & eCommerce Solutions</li>
+                        <li>Accessibility & Performance-First Approach</li>
+                        <li>AI-Powered Development Workflows</li>
+                        <li>Pixel-Perfect UI Enthusiast</li>
+                        <li>Mentor for Junior Developers</li>
+                        <li>Passionate About UI/UX & Design Systems</li>
+                        <li>Available for New Opportunities</li>
                     </ul>
                     <p>I'm always open to exciting opportunities, so feel free to <strong>Reach out</strong> if you need a skilled web designer for your next project. Let's create something amazing together! 😊</p>
                 </motion.div>

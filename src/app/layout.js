@@ -10,8 +10,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Hemali Rami",
-  description: "Web designer portfolio built with Next.js & Tailwind CSS",
+  title: "Hemali Rami | Senior Frontend Developer & UI Specialist",
+  description:
+    "Portfolio of Hemali Rami, a Senior Frontend Developer specializing in pixel-perfect UI implementation, responsive design, web accessibility, WordPress, Shopify, Tailwind CSS, React, Next.js, Angular, and performance optimization.",
 };
 export default function RootLayout({ children }) {
   return (
