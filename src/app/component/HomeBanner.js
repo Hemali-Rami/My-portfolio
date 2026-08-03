@@ -23,8 +23,49 @@ const HomeBanner = () => {
         whileInView={isMobile ? {} : { opacity: 1, x: 0 }}
         viewport={isMobile ? {} : { once: true, amount: 0.3 }}
         transition={isMobile ? {} : { duration: 0.8, ease: "easeOut" }}>
-                <h1 className='lg:text-[60px] md:text-[45px] sm:text-[36px] xs:text-[36px] xxs:text-[36px] xxxs:text-[36px] font-bold text-gray-900 dark:text-[#F9FAFB]'>Hi, I’m Hemali👋</h1>
-                <p className='text-gray-600 text-md mt-1 leading-[28px] dark:text-[#D1D5DB]'>A passionate Senior Frontend Developer with 7+ years of experience building responsive, accessible, and high-performance web applications using React.js, Next.js, Angular, WordPress (Elementor, Spectra, and Avada), HTML5, CSS3, SCSS, Bootstrap, Tailwind CSS, and JavaScript. Skilled in creating pixel-perfect UI/UX experiences, converting Figma and Photoshop designs into production-ready interfaces, and optimizing websites for SEO, Core Web Vitals, accessibility, and performance. Experienced in leveraging AI-powered tools such as ChatGPT, GitHub Copilot, Claude, and Gemini to enhance development efficiency, code quality, and workflow automation. From websites and eCommerce platforms to email templates, newsletters, digital signatures, and PDF layouts, I focus on delivering scalable, user-friendly, and visually compelling digital experiences.</p>
+            <p className="mb-3 text-lg font-medium text-gray-600 dark:text-gray-400">Hi, I'm <span className="text-pink-500">Hemali 👋</span></p>
+                <h1 className='lg:text-[50px] md:text-[45px] sm:text-[36px] xs:text-[36px] xxs:text-[36px] xxxs:text-[36px] font-bold text-gray-900 dark:text-[#F9FAFB]'>Senior Frontend Developer</h1>
+                <p className="mt-4 text-xl font-medium text-slate-600 dark:text-slate-300 mb-[20px]"> Building fast, accessible and scalable web experiences.</p>
+                <p className='text-gray-600 text-md mt-1 leading-[28px] dark:text-[#D1D5DB]'>Frontend Developer with 7+ years of experience building responsive, accessible, and high-performance websites.</p>
+                <p className='text-gray-600 text-md mt-1 leading-[28px] dark:text-[#D1D5DB]'>Specialized in React, Next.js, WordPress, Shopify, and modern UI development.</p>
+                <div className="flex flex-wrap gap-3 mt-6">
+  {[
+    "HTML5",
+    "CSS3",
+    "Bootstrap",
+    "JavaScript",
+    "React.js",
+    "Next.js",
+    "WordPress",
+  ].map((skill) => (
+    <span
+      key={skill}
+      className="px-4 py-2 rounded-full text-sm font-medium border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-900"
+    >
+      {skill}
+    </span>
+  ))}
+</div>
+                <div className="grid md:grid-cols-3 grid-cols-2 gap-4 mt-8 max-w-[550px]">
+  <div className="rounded-2xl border border-slate-200 dark:border-slate-800 p-4 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
+     <h3 className="text-4xl font-bold">7+</h3>
+  <p className="text-sm text-slate-500">Years Experience</p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 dark:border-slate-800 p-4 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
+    <h3 className="text-3xl font-bold text-slate-900 dark:text-white">
+      150+
+    </h3>
+    <p className="text-sm text-slate-500 mt-1">
+      Projects Delivered
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-slate-200 dark:border-slate-800 p-4 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm col-span-2 md:col-span-1">
+     <h3 className="text-4xl font-bold">95+</h3>
+  <p className="text-sm text-slate-500">PageSpeed Score</p>
+  </div>
+</div>
                 <div className='location flex items-center mt-[48px]'>
                     {darkMode ? (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M20 10C20 16 12 22 12 22C12 22 4 16 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z" stroke="#ffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -152,7 +193,7 @@ const HomeBanner = () => {
                     transition={isMobile ? {} : { duration: 0.8, ease: "easeOut" }}>
                 <div>
                     <div className='bannerimg lg:pr-[40px] lg:pb-[40px] md:pr-[40px] md:pb-[40px] sm:p-[20px] xs:p-[20px] xxs:p-[20px] xxxs:p-[20px]'>
-                        <Image src="/images/my_photo_blur.png" alt="Portrait of Hemali Rami" width={280} height={320} className='border-[8px] border-white dark:border-[#030712]' />
+                        <Image src="/images/updated-my-photo.png" alt="Portrait of Hemali Rami" width={400} height={320} className='border-[8px] border-white dark:border-[#030712]' />
                     </div>
                 </div>
             </motion.div>

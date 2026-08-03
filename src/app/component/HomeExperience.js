@@ -29,7 +29,7 @@ const experience = [
     ],
   },
   {
-    title: "Independent Web Designer (Self-Projects & Courses)",
+    title: "Frontend Developer – Independent Projects",
     fromto: "Jun 2024 - Dec 2025",
     cimg: "Hemali_logo",
     desc: [
@@ -40,7 +40,7 @@ const experience = [
     ],
   },
   {
-    title: "Front End Designer",
+    title: "Frontend Designer",
     fromto: "Dec 2022 - Jun 2024",
     cimg: "ADDV_healthcare_solutions",
     desc: [
@@ -51,7 +51,7 @@ const experience = [
     ],
   },
   {
-    title: "Frontend Web Designer",
+    title: "Frontend Designer",
     fromto: "June 2021 - Aug 2022",
     cimg: "moon_new_logo",
     desc: [

@@ -73,8 +73,12 @@ const HomeWork = () => {
     <div className='lg:container m-auto px-[15px]'>
       <div className="workpart section_space pb-0 overflow-x-hidden">
         <div className='text-center'>
-          <h5 className='bg-gray-200 text-gray-600 font-medium py-[4px] px-[20px] rounded-full inline-block text-sm dark:bg-[#374151] dark:text-white'>Work</h5>
-          <p className='text-gray-600 text-[20px] mt-[16px] block dark:text-[#D1D5DB]'>Some of the noteworthy projects I have built:</p>
+          <h5 className='bg-gray-200 text-gray-600 font-medium py-[4px] px-[20px] rounded-full inline-block text-sm dark:bg-[#374151] dark:text-white'>Featured Projects</h5>
+           <h3 className="text-4xl font-bold mb-4 mt-4">
+            Selected Work
+          </h3>
+          <p className='text-gray-600 text-[20px] mt-[16px] block dark:text-[#D1D5DB]'>A selection of client and personal projects showcasing responsive,
+accessible, and high-performance frontend development.</p>
         </div>
 
         <div className='workmain inner_space'>

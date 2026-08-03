@@ -116,7 +116,6 @@ body {
   color:#4B5563;
   margin-bottom: 10px;
   line-height: 24px;
-  width: 50%;
   display: inline-block;
 }
 .expdescription ul li{
@@ -133,9 +132,8 @@ body {
   height: 4px;
   border-radius: 100%;
   background: #4B5563;
-  top:0;
+  top:10px;
   left: 7px;
-  bottom: 0;
   margin: auto;
   position: absolute;
 }
@@ -155,7 +153,6 @@ body {
 .skillsmain  li{
   text-align: center;
   display: inline-block;
-  width: 12.28%;
   padding: 0 15px;
   margin-bottom: 48px;
 }
@@ -185,9 +182,7 @@ body {
   line-height: 40px !important;
 }
 @media (max-width:991px) {
-  .skillsmain li{
-    width: 16.66%;
-  }
+ 
 }
 @media (max-width:767px) {
   .mobilemenu::after{
@@ -200,7 +195,7 @@ body {
     top:40px;
   }
   .aboutcontentpart{
-    padding-top: 48px;
+    padding-bottom: 48px;
   }
   .bannerpart.section_space{
     padding-top: 0px;
@@ -223,11 +218,7 @@ body {
 }
 }
 @media (max-width:640px) {
-  .skillsmain  li{
-    width: 33.33%;
-  }
   .aboutcontentpart  li{
     width: 100%;
   }
-  
 }

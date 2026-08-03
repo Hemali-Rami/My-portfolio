@@ -7,6 +7,7 @@ const Footer = () => {
   const { darkMode } = useTheme(); 
  const isMobile = useMobile();
    const [mounted, setMounted] = useState(false);
+   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     setMounted(true); // ensures client-side rendering
@@ -29,7 +30,7 @@ const Footer = () => {
             </clipPath>
             </defs>
           </svg>
-          2025 | <span className='underline underline-offset-8 mx-2'>Designed</span> and <span className='underline underline-offset-8 mx-2'>coded</span> with ❤️️ by Hemali Rami</p>
+          {currentYear}  | <span className='underline underline-offset-8 mx-2'>Designed</span> and <span className='underline underline-offset-8 mx-2'>coded</span> with ❤️️ by Hemali Rami</p>
       </div>
     </div>
     <div className='scrolltotopdiv'>

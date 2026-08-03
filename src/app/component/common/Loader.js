@@ -55,7 +55,13 @@ const Loader = ({ onComplete }) => {
       transition={{ duration: 1 }}
       style={{ display: isComplete ? "none" : "flex" }}
     >
-        <Image src="/images/loader_logo.svg" width={100} height={100} alt="Hemali"/>
+        {/* <Image src="/images/loader_logo.svg" width={100} height={100} alt="Hemali"/> */}
+        <Image
+  src={darkMode ? "/images/dark-mode-loader-logo.svg" : "/images/loader_logo.svg"}
+  width={100}
+  height={100}
+  alt="Hemali"
+/>
       <p className="mb-2 mt-4">{loadingText}</p>
       <div className="absolute lg:top-0 md:top-0 sm:top-0 xs:top-[30%] xss:top-[30%] xxxs:top-[30%] lg:right-0 lg:left-auto md:right-0 md:left-auto sm:right-0 sm:left-0 xs:right-0 xs:left-0 xxs:right-0 xxs:left-0  xxxs:right-0 xxxs:left-0 bottom-0 m-auto flex lg:items-center md:items-center  w-full h-full lg:justify-end md:justify-end sm:justify-center xs:justify-end xxs:justify-center xxxs:justify-center z-[-1]">
         <p className="lg:text-[500px] md:text-[200px] sm:text-[200px] xs:text-[200px] xxs:text-[200px] xxxs:text-[200px] text-slate-900 dark:text-gray-700">{progress}</p>
