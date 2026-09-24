@@ -10,7 +10,8 @@ const companydes = [
   {
     name: "Concept Infoway",
     desc: "Developed a fully responsive business website using WordPress. implemented HTML,custom CSS and jQuery and their plugins to make for interactive elements.",
-    techno: ["HTML5","CSS","jQuery","Bootstrap","Wordpress"],
+    techno: ["HTML5","CSS","jQuery","Bootstrap","WordPress"],
+    categories: ["HTML / CSS", "WordPress"],
     wimg: "CIPL_website",
     wLink: "https://www.conceptinfoway.net/"
   },
@@ -18,6 +19,7 @@ const companydes = [
     name: "Moontechnolabs",
     desc: "Developed a fully responsive company website with a custom design. The website showcases various services and products, built using the latest technologies to ensure performance, accessibility, and cross-browser compatibility.",
     techno: ["HTML5","CSS","jQuery","Bootstrap"],
+    categories: ["HTML / CSS"],
     wimg: "moontechnolabs",
     wLink: "https://www.moontechnolabs.com/"
   },
@@ -25,20 +27,23 @@ const companydes = [
     name: "Mooninvoice",
     desc: "Developed a fully responsive company product website showcasing various business operations, including invoices, estimates, purchase orders, sales receipts, time tracking, reports, and project management. The website was built with fully custom modules to meet specific business needs.",
     techno: ["HTML5","CSS","Javascript","Bootstrap"],
+    categories: ["HTML / CSS"],
     wimg: "moon_invoice",
     wLink: "https://www.mooninvoice.com/"
   },
   {
     name: "allDayDR",
     desc: "Developed a fully responsive company website for the healthcare industry, facilitating online consultations between doctors, pharmacists, and patients. The website was built using WordPress to ensure flexibility and ease of content management.",
-    techno: ["HTML5","CSS","Javascript","Bootstrap","Wordpress"],
+    techno: ["HTML5","CSS","Javascript","Bootstrap","WordPress"],
+    categories: ["HTML / CSS", "WordPress"],
     wimg: "alldayDR",
     wLink: "https://www.alldaydr.com/home"
   },
   {
     name: "Applocum",
     desc: "Developed a fully responsive company website for recruiting doctors and medical staff. The website highlights vacancies, services, and industry news. AppLocum streamlines the locum staffing process by leveraging technology, combining the expertise of seasoned consultants and experienced clinicians to support the healthcare industry’s staffing needs.",
-    techno: ["HTML5","CSS","Javascript","Bootstrap","Wordpress"],
+    techno: ["HTML5","CSS","Javascript","Bootstrap","WordPress"],
+    categories: ["HTML / CSS", "WordPress"],
     wimg: "applocum",
     wLink: "https://www.applocum.com/"
   },
@@ -46,6 +51,7 @@ const companydes = [
     name: "ADDVantage Technologies",
     desc: "Developed a fully responsive company website to showcase product information, team details, and digital healthcare solutions. The platform delivers bespoke, secure, and intuitive technology solutions tailored to the healthcare industry.",
     techno: ["HTML5","CSS","Javascript","Bootstrap","NextJS"],
+    categories: ["HTML / CSS", "Next.js"],
     wimg: "adddvsolution",
     wLink: "https://addvantage-technologies.co.uk/"
   },
@@ -53,6 +59,7 @@ const companydes = [
     name: "healthya",
     desc: "Developed a fully responsive website using Elementor to showcase health management solutions. The platform features a user-friendly self-service kiosk for quick well-being monitoring, the Healthya app for online consultations and self-assessment tools, and data-driven insights for targeted interventions, care coordination, and public health strategy improvements.",
     techno: ["HTML5","CSS","Javascript","Bootstrap","WordPress","Elementor"],
+    categories: ["HTML / CSS", "WordPress"],
     wimg: "healthya",
     wLink: "https://www.healthya.co.uk/"
   },
@@ -62,10 +69,18 @@ const HomeWork = () => {
   const { darkMode } = useTheme(); 
   const isMobile = useMobile();
   const [mounted, setMounted] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const categories = ["All", "React", "Next.js", "WordPress", "HTML / CSS"];
+  const filteredProjects = companydes.filter((co) => activeCategory === "All" || co.categories.includes(activeCategory));
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    setShowAllProjects(false);
+  }, [activeCategory]);
 
   if (!mounted) return null;
 
@@ -77,12 +92,31 @@ const HomeWork = () => {
            <h3 className="text-4xl font-bold mb-4 mt-4">
             Selected Work
           </h3>
-          <p className='text-gray-600 text-[20px] mt-[16px] block dark:text-[#D1D5DB]'>A selection of client and personal projects showcasing responsive,
-accessible, and high-performance frontend development.</p>
+          <p className='text-gray-600 text-[20px] mt-[16px] block dark:text-[#D1D5DB]'>A selection of client and personal projects showcasing thoughtful UI, responsive design, and modern frontend development.</p>
+        </div>
+
+        <div className='inner_space flex flex-wrap justify-center gap-[12px]' role='tablist' aria-label='Filter projects by technology'>
+          {categories.map((category) => (
+            <button
+              key={category}
+              type='button'
+              role='tab'
+              aria-selected={activeCategory === category}
+              onClick={() => setActiveCategory(category)}
+              className={`font-medium py-[4px] px-[20px] rounded-full text-sm transition-all duration-300 ${activeCategory === category ? 'bg-gray-900 text-white dark:bg-gray-50 dark:text-gray-900' : 'bg-gray-200 text-gray-600 hover:bg-gray-300 dark:bg-[#374151] dark:text-white dark:hover:bg-gray-600'}`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
 
         <div className='workmain inner_space'>
-          {companydes.map((co, index) => {
+          {filteredProjects.length === 0 ? (
+            <div className='py-[64px] text-center' role='status'>
+              <h4 className='text-xl text-gray-900 font-semibold dark:text-white'>No projects here just yet</h4>
+              <p className='text-base text-gray-600 mt-[12px] dark:text-[#D1D5DB]'>This collection is growing. Check back soon for more work.</p>
+            </div>
+          ) : filteredProjects.slice(0, showAllProjects ? filteredProjects.length : 2).map((co, index) => {
             const isEven = index % 2 === 0;
 
             // Animation direction
@@ -100,7 +134,7 @@ accessible, and high-performance frontend development.</p>
             return (
               <motion.div
                 key={index}
-                className={`workbox ${parentClass} md:flex md:flex-col sm:flex-col xs:flex-col xxs:flex-col xxxs:flex-col shadow-md rounded-md lg:mb-[48px] md:mb-[30px] sm:mb-[24px] xs:mb-[24px] xxs:mb-[24px] xxxs:mb-[24px] overflow-hidden`}
+                className={`workbox ${parentClass} md:flex md:flex-col sm:flex-col xs:flex-col xxs:flex-col xxxs:flex-col shadow-[0_12px_30px_rgba(17,24,39,0.10)] dark:shadow-md rounded-md lg:mb-[48px] md:mb-[30px] sm:mb-[24px] xs:mb-[24px] xxs:mb-[24px] xxxs:mb-[24px] overflow-hidden`}
                 initial={initialAnim}
                 whileInView={whileInViewAnim}
                 viewport={isMobile ? {} : { once: true, amount: 0.3 }}
@@ -118,7 +152,8 @@ accessible, and high-performance frontend development.</p>
                       <li key={i} className='bg-gray-200 px-[20px] py-[4px] text-gray-600 text-base font-medium rounded-full mr-[8px] mb-[8px] dark:bg-[#374151] dark:text-white'>{tec}</li>
                     ))}
                   </ul>
-                  <Link href={co.wLink} target='_blank'>
+                  <Link href={co.wLink} target='_blank' className='flex items-center gap-2 text-gray-600 font-medium dark:text-white'>
+                    <span>Website</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M18 13V19C18 19.53 17.79 20.04 17.41 20.41C17.04 20.79 16.53 21 16 21H5C4.47 21 3.96 20.79 3.59 20.41C3.21 20.04 3 19.53 3 19V8C3 7.47 3.21 6.96 3.59 6.59C3.96 6.21 4.47 6 5 6H11" stroke={darkMode ? "#fff" : "#4B5563"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       <path d="M15 3H21V9" stroke={darkMode ? "#fff" : "#4B5563"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -130,6 +165,17 @@ accessible, and high-performance frontend development.</p>
             );
           })}
         </div>
+        {filteredProjects.length > 2 && (
+          <div className='text-center mt-[32px]'>
+            <button
+              type='button'
+              onClick={() => setShowAllProjects((current) => !current)}
+              className='text-gray-600 font-medium border-b-2 border-[#ffcbc1] pb-1 transition-all duration-300 hover:text-gray-900 dark:text-[#D1D5DB] dark:hover:text-white'
+            >
+              {showAllProjects ? "Show Less" : "View More Projects"}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   )

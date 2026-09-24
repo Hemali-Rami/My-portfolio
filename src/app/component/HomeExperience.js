@@ -16,8 +16,11 @@ const fadeUp = {
 const experience = [
   {
     title: "Sr. Frontend Developer",
-    fromto: "Dec 2025 - Present",
+    company: "WPWeb Infotech",
+    fromto: "Dec 2025 - Jul 2026",
     cimg: "wpweb-logo",
+    technologies: ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "WordPress"],
+    summary: "Build accessible, high-performance websites and web applications while collaborating with designers, clients, and junior developers.",
     desc: [
       "Designed and developed responsive, mobile-first websites and web applications using HTML5, CSS3, JavaScript, jQuery, Tailwind CSS, React, and Next.js.",
       "Converted Figma and Photoshop designs into clean, pixel-perfect, accessible, and cross-browser compatible user interfaces.",
@@ -30,8 +33,11 @@ const experience = [
   },
   {
     title: "Frontend Developer – Independent Projects",
+    company: "Independent Projects",
     fromto: "Jun 2024 - Dec 2025",
     cimg: "Hemali_logo",
+    technologies: ["React", "Next.js", "Tailwind CSS", "WordPress"],
+    summary: "Built and deployed responsive portfolio and demo websites while strengthening modern frontend, accessibility, and WordPress skills.",
     desc: [
       "Built personal projects using React, Next.js, and Tailwind CSS.",
       "Practiced accessibility-first design and responsive layouts.",
@@ -41,8 +47,11 @@ const experience = [
   },
   {
     title: "Frontend Designer",
+    company: "ADDVantage Technologies",
     fromto: "Dec 2022 - Jun 2024",
     cimg: "ADDV_healthcare_solutions",
+    technologies: ["React", "Next.js", "HTML5", "SCSS", "WordPress"],
+    summary: "Delivered responsive healthcare websites, CMS pages, templates, and accessible interfaces across React, Next.js, and WordPress projects.",
     desc: [
       "Worked on live projects using React.js and Next.js.",
       "Experienced in HTML5, CSS,Bootstrap 4-5,JavaScript, SCSS, and developing responsive, cross-browser compatible websites with web accessibility features.",
@@ -52,8 +61,11 @@ const experience = [
   },
   {
     title: "Frontend Designer",
+    company: "Moon Technolabs",
     fromto: "June 2021 - Aug 2022",
     cimg: "moon_new_logo",
+    technologies: ["AngularJS", "HTML5", "CSS3", "jQuery", "WooCommerce"],
+    summary: "Developed responsive landing pages and supported AngularJS and WooCommerce products while maintaining legacy projects across browsers.",
     desc: [
       "Worked on AngularJS projects for in-house products.",
       "Developed simple landing pages using HTML5, CSS, and jQuery.",
@@ -63,8 +75,11 @@ const experience = [
   },
   {
     title: "Jr. XHTML Developer",
+    company: "Concept Infoway",
     fromto: "Oct 2018 - Mar 2021",
     cimg: "cipl_Logo",
+    technologies: ["HTML5", "CSS3", "jQuery", "WordPress", "WooCommerce"],
+    summary: "Created client landing pages and email templates, and assisted with WordPress, WooCommerce, and PHP projects.",
     desc: [
       "Worked with and gained experience in HTML5, CSS, and jQuery technologies.",
       "Assisted in designing WordPress, WooCommerce, and PHP projects.",
@@ -77,6 +92,7 @@ const experience = [
 const HomeExperience = () => {
   const isMobile = useMobile();
   const [mounted, setMounted] = useState(false);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -92,54 +108,56 @@ const HomeExperience = () => {
             Experience
           </h5>
           <p className="text-gray-600 text-[20px] mt-[16px] block dark:text-[#D1D5DB]">
-            Here is a quick summary of my most recent experiences:
+            7+ years of building responsive, accessible and high-performance web experiences.
           </p>
         </div>
-        <div className="exprincemain inner_space">
-          {experience.map((exp, index) => (
+        <div className="exprincemain inner_space grid grid-cols-1 md:grid-cols-2 gap-[24px] lg:gap-[48px]">
+          {experience.slice(0, showAll ? experience.length : 4).map((exp, index) => (
             <motion.div
               key={index}
-              className="experincebox lg:flex md:flex sm:flex lg:flex-row md:flex-row sm:flex-row xs:flex-col xxs:flex-col xxxs:flex-col shadow-md rounded-md p-[32px] lg:mb-[48px] md:mb-[30px] sm:mb-[24px] xs:mb-[24px] xxs:mb-[24px] xxxs:mb-[24px] dark:bg-[#1F2937]"
+              className="experincebox flex flex-col shadow-md rounded-md p-[32px] dark:bg-[#1F2937]"
               variants={!isMobile ? fadeUp : {}} // ✅ disable animation on mobile
               initial={!isMobile ? "hidden" : undefined}
               whileInView={!isMobile ? "visible" : undefined}
               viewport={!isMobile ? { once: true, amount: 0.2 } : undefined}
               custom={index}
             >
-              <div className="companylogo lg:w-[40%] md:w-[40%] sm:w-[40%] xs:w-full xxs:w-full xxxs:w-full">
+              <div className="companylogo w-full mb-[24px]">
                 <div className="bg-white p-3 rounded-lg inline-block">
                   <Image
                     src={`/images/company/${exp.cimg}.svg`}
-                    alt={exp.title}
+                    alt={`${exp.company} logo`}
                     width={200}
                     height={45}
                   />
                 </div>
               </div>
-              <div className="companydec lg:w-[60%] md:w-[60%] sm:w-[60%] xs:w-full xxs:w-full xxxs:w-full">
-                <div className="contenthead lg:flex md:flex sm:flex justify-between mb-3 flex-wrap lg:flex-row md:flex-col">
-                  <h3 className="text-xl text-gray-900 font-semibold dark:text-white lg:mt-0 md:mt-0 sm:mt-0 xs:mt-[16px] xxs:mt-[16px] xxxs:mt-[16px]">
-                    {exp.title}
-                  </h3>
-                  <span className="fromto text-base text-gray-600 dark:text-white lg:mt-0 md:mt-0 sm:mt-0 xs:mt-[16px] xxs:mt-[16px] xxxs:mt-[16px] block">
+              <div className="companydec w-full">
+                <div className="contenthead flex justify-between mb-3 flex-wrap">
+                  <div>
+                    <h3 className="text-xl text-gray-900 font-semibold dark:text-white">{exp.title}</h3>
+                    <p className="text-base text-gray-600 dark:text-[#D1D5DB] mt-2">{exp.company}</p>
+                  </div>
+                  <span className="fromto text-base text-gray-600 dark:text-white block mt-2">
                     {exp.fromto}
                   </span>
                 </div>
-                <div className="expdescription lg:w-[60%] md:w-full sm:w-full">
-                  <ul>
-                    {exp.desc?.map((dec, i) => (
-                      <li
-                        key={i}
-                        className="text-base text-gray-600 leading-[28px] mb-2"
-                      >
-                        {dec}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="expdescription w-full">
+                  <p className="text-base text-gray-600 leading-[28px] mb-4 dark:text-[#D1D5DB]">{exp.technologies.join(" / ")}</p>
+                  <p className="text-base text-gray-600 leading-[28px] dark:text-[#D1D5DB]">{exp.summary}</p>
                 </div>
               </div>
             </motion.div>
           ))}
+        </div>
+        <div className="text-center mt-[32px]">
+          <button
+            type="button"
+            onClick={() => setShowAll((current) => !current)}
+            className="text-gray-600 font-medium border-b-2 border-[#ffcbc1] pb-1 transition-all duration-300 hover:text-gray-900 dark:text-[#D1D5DB] dark:hover:text-white"
+          >
+            {showAll ? "Show Less" : "View More Experience"}
+          </button>
         </div>
       </div>
     </div>
