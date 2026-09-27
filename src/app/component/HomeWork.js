@@ -8,6 +8,58 @@ import useMobile from "./common/useMobile";
 
 const companydes = [
   {
+    name: "Personal Portfolio",
+    desc: "Designed and developed a responsive personal portfolio website using Next.js, Tailwind CSS, and Framer Motion to showcase my projects, skills, and professional experience.",
+    techno: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    categories: ["React", "Next.js"],
+    wimg: "portfoilio_website_new",
+    wLink: "https://my-portfolio-nu-topaz-11.vercel.app/"
+  },
+  {
+  name: "Flowlytics",
+  desc: "A modern analytics dashboard built with React, Vite, and Tailwind CSS, featuring authentication, responsive UI, analytics, and dark mode.",
+  techno: ["React", "Vite", "JavaScript", "Tailwind CSS"],
+  categories: ["React"],
+  wimg: "flowlytics",
+  wLink: "https://flowlytics-gamma.vercel.app/"
+},
+  {
+    name: "WPWeb Infotech",
+    desc: "Developed a responsive corporate website using WordPress and Gutenberg, focusing on structured layouts, reusable content blocks, and responsive design.",
+    techno: ["WordPress", "Gutenberg", "HTML5", "CSS", "JavaScript"],
+    categories: ["WordPress", "HTML / CSS"],
+    wimg: "wpwebinfotech",
+    wLink: "https://wpwebinfotech.com/",
+  },
+
+  {
+    name: "Gapp Group",
+    desc: "Developed a responsive business website using WordPress and Gutenberg, creating structured pages and custom content sections with a focus on modern responsive design.",
+    techno: ["WordPress", "Gutenberg", "HTML5", "CSS", "JavaScript"],
+    categories: ["WordPress", "HTML / CSS"],
+    wimg: "gappgroup",
+    wLink: "https://gappgroup.com/",
+  },
+
+  {
+    name: "ApexMountainMan",
+    desc: "Developed a responsive eCommerce website using WordPress and WooCommerce, including product categories, shopping functionality, customer accounts, and online checkout.",
+    techno: ["WordPress", "WooCommerce", "HTML5", "CSS", "JavaScript"],
+    categories: ["WordPress", "HTML / CSS"],
+    wimg: "apexmountainman",
+    wLink: "https://apexmountainman.com/",
+  },
+
+  {
+    name: "Mingo Manufacturing",
+    desc: "Developed a responsive WordPress website for a manufacturing company, focusing on structured content, service sections, product presentation, and responsive layouts.",
+    techno: ["WordPress", "HTML5", "CSS", "JavaScript"],
+    categories: ["WordPress", "HTML / CSS"],
+    wimg: "mingomanufacturing",
+    wLink: "https://mingomanufacturing.com/",
+  },
+
+  {
     name: "Concept Infoway",
     desc: "Developed a fully responsive business website using WordPress. implemented HTML,custom CSS and jQuery and their plugins to make for interactive elements.",
     techno: ["HTML5","CSS","jQuery","Bootstrap","WordPress"],
@@ -50,19 +102,19 @@ const companydes = [
   {
     name: "ADDVantage Technologies",
     desc: "Developed a fully responsive company website to showcase product information, team details, and digital healthcare solutions. The platform delivers bespoke, secure, and intuitive technology solutions tailored to the healthcare industry.",
-    techno: ["HTML5","CSS","Javascript","Bootstrap","NextJS"],
+    techno: ["HTML5","CSS","React","Next.js"],
     categories: ["HTML / CSS", "Next.js"],
     wimg: "adddvsolution",
     wLink: "https://addvantage-technologies.co.uk/"
   },
   {
-    name: "healthya",
-    desc: "Developed a fully responsive website using Elementor to showcase health management solutions. The platform features a user-friendly self-service kiosk for quick well-being monitoring, the Healthya app for online consultations and self-assessment tools, and data-driven insights for targeted interventions, care coordination, and public health strategy improvements.",
-    techno: ["HTML5","CSS","Javascript","Bootstrap","WordPress","Elementor"],
-    categories: ["HTML / CSS", "WordPress"],
-    wimg: "healthya",
-    wLink: "https://www.healthya.co.uk/"
-  },
+  name: "healthya",
+  desc: "Developed a responsive health management website using Next.js and Tailwind CSS, focusing on modern UI, reusable components, and responsive layouts across devices.",
+  techno: ["Next.js", "React", "Tailwind CSS"],
+  categories: ["React", "Next.js"],
+  wimg: "healthya",
+  wLink: "https://www.healthya.co.uk/"
+},
 ];
 
 const HomeWork = () => {
